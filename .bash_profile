@@ -48,3 +48,24 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+# Set virtualenv to use projectfolder for env store
+export PIPENV_VENV_IN_PROJECT=1
+
+export JAVA_HOME="$(/usr/libexec/java_home)"
+#export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-14.0.1.jdk/Contents/Home"
+export JDK_HOME="$(/usr/libexec/java_home)"
+#export JDK_HOME="/Library/Java/JavaVirtualMachines/openjdk-14.0.1.jdk/Contents/Home"
+
+#enabling Jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+# Google Cloud SDK
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/mark/Applications.sync/google-cloud-sdk/path.bash.inc' ]; then . '/Users/mark/Applications.sync/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/mark/Applications.sync/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/mark/Applications.sync/google-cloud-sdk/completion.bash.inc'; fi

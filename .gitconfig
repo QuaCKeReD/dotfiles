@@ -127,7 +127,8 @@
 [commit]
 
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+#	gpgsign = true
+	template = /Users/mark/.stCommitMsg
 
 [diff]
 
@@ -181,3 +182,19 @@
 [init]
 
 	templateDir = ~/.config/git/template/
+[user]
+	email = dev@mark.kellysmith.uk
+	name = Mark Kelly-Smith
+#	signingkey = 6291AB935BDB66E7
+
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Users/mark/Applications.sync/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
