@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
+#
 # Install command-line tools using Homebrew.
+#
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -21,7 +23,7 @@ brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+brew install gnu-sed #--with-default-names
 # Install a modern version of Bash.
 brew install bash
 brew install bash-completion2
@@ -33,13 +35,13 @@ if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
 fi;
 
 # Install `wget` with IRI support.
-brew install wget --with-iri
+brew install wget #--with-iri
 
 # Install GnuPG to enable PGP-signing commits.
 brew install gnupg
 
 # Install more recent versions of some macOS tools.
-brew install vim --with-override-system-vi
+brew install vim #--with-override-system-vi
 brew install grep
 brew install openssh
 brew install screen
@@ -51,6 +53,11 @@ brew tap bramstein/webfonttools
 brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
+
+brew tap caskroom/fonts
+brew cask install font-source-code-pro
+brew cask install font-fontawesome
+brew cask install font-inconsolata-dz-for-powerline
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install aircrack-ng
@@ -84,8 +91,9 @@ brew install ack
 brew install git
 brew install git-lfs
 brew install gs
-brew install imagemagick --with-webp
-brew install lua
+brew install imagemagick #--with-webp
+brew install jq		    # grep for json
+brew install json2csv
 brew install lynx
 brew install p7zip
 brew install pigz
@@ -95,7 +103,128 @@ brew install rlwrap
 brew install ssh-copy-id
 brew install tree
 brew install vbindiff
+brew install webkit2png	# captures webpage screenshots
 brew install zopfli
+
+brew install readline
+brew install openssl
+
+# File transfer
+brew install curl
+brew install ctags
+# https://duck.sh/
+brew install duck
+
+# Programing language
+brew install node
+brew install scala
+brew install go
+brew install lua
+
+brew install python
+brew link --overwrite python
+ln -s /usr/local/bin/python3 /usr/local/bin/python
+sudo easy_install pip
+brew install pipenv
+#Install CSVKit and check to make sure that it is in your path
+pip install csvkit
+
+
+# development
+brew install maven
+brew install gradle
+brew install ansible
+
+brew install jenv
+# https://github.com/gcuisinier/jenv
+jenv enable-plugin gradle
+jenv enable-plugin maven
+
+# IAAS cli
+brew install awscli
+brew install kubernetes-cli
+brew install minikube
+
+# System Monitor
+#brew cask install istat-menus4
+brew install htop-osx
+brew install hping
+
+# AppD dashbaording
+brew install graphviz
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+
+#
+# CASKS
+#
+if [[ $1 == "cask" ]]; then
+	# Java
+	#brew cask install caskroom/versions/java7
+	# Default use java8
+	brew cask install java
+
+	brew cask install 1password
+
+	brew cask install iterm2
+
+	brew cask install cyberduck
+
+	brew cask install dropbox
+	brew cask install google-drive
+
+	brew cask install skype
+	brew cask install zoom
+	brew cask install slack
+
+	brew cask install alfred
+	brew cask alfred link
+
+	brew cask install onyx
+
+	# for compare file
+	brew cask diffmerge
+
+	# VM
+	brew cask install virtualbox
+	brew cask install vagrant
+	vagrant plugin install vagrant-vbguest
+	brew cask install docker
+
+	# DB Monitor
+	#brew cask install sequel-pro
+	#brew cask install pgadmin3
+	#brew cask install dbeaver-enterprise
+
+	#Redis Monitor
+	#brew cask install rdm
+
+	# browser
+	#brew cask install google-chrome
+	#brew cask install google-chrome-canary
+	#brew cask install firefox
+	#brew cask install firefox-beta
+	#brew cask install safari-technology-preview
+
+	# Personal Kanban
+	#brew cask install teamviz
+	#brew cask install tomighty
+fi
+
+#
+# Utils
+#
+
+#https://github.com/karaggeorge/macos-audio-devices
+npm install -g macos-audio-devices
+
+
+
+
+
+
+
+
+
