@@ -42,6 +42,8 @@ brew install gnupg
 
 # Install more recent versions of some macOS tools.
 brew install vim #--with-override-system-vi
+brew link --overwrite perl
+
 brew install grep
 brew install openssh
 brew install screen
@@ -54,7 +56,7 @@ brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
 
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 brew cask install font-source-code-pro
 brew cask install font-fontawesome
 brew cask install font-inconsolata-dz-for-powerline
@@ -93,7 +95,7 @@ brew install git-lfs
 brew install gs
 brew install imagemagick #--with-webp
 brew install jq		    # grep for json
-brew install json2csv
+#brew install json2csv
 brew install lynx
 brew install p7zip
 brew install pigz
@@ -110,7 +112,8 @@ brew install readline
 brew install openssl
 
 # File transfer
-brew install curl
+#macOS already has curl
+#brew install curl
 brew install ctags
 # https://duck.sh/
 brew install duck
@@ -137,6 +140,7 @@ brew install ansible
 
 brew install jenv
 # https://github.com/gcuisinier/jenv
+jenv enable-plugin export
 jenv enable-plugin gradle
 jenv enable-plugin maven
 
@@ -155,6 +159,7 @@ brew install graphviz
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
 
 #
 # Utils
