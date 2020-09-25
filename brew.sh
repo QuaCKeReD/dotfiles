@@ -126,7 +126,7 @@ brew install lua
 
 brew install python
 brew link --overwrite python
-ln -s /usr/local/bin/python3 /usr/local/bin/python
+#ln -s /usr/local/bin/python3 /usr/local/bin/python
 sudo easy_install pip
 brew install pipenv
 #Install CSVKit and check to make sure that it is in your path
@@ -139,10 +139,18 @@ brew install gradle
 brew install ansible
 
 brew install jenv
+exec $SHELL -l
 # https://github.com/gcuisinier/jenv
+#eval "$(jenv init -)"
 jenv enable-plugin export
 jenv enable-plugin gradle
 jenv enable-plugin maven
+
+jenv add `/usr/libexec/java_home`
+jenv global system
+jenv shell system
+jenv versions
+jenv doctor
 
 # IAAS cli
 brew install awscli
