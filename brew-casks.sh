@@ -4,6 +4,9 @@
 # CASKS
 #
 
+#brew to install gui for brew :)
+brew cask install cakebrew
+
 # Java
 #brew cask install caskroom/versions/java7
 # Default use java8
