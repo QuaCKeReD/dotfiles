@@ -17,6 +17,7 @@ alias g="git"
 alias h="history"
 alias hg="history | grep "
 alias j="jobs"
+alias psg="ps -ef | grep "
 
 alias nuget="mono /usr/local/bin/nuget.exe"
 
