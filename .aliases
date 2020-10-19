@@ -162,3 +162,6 @@ alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# Kill LogiTech Mgr Daemon - and check it auto restarts!
+alias logikill="psg -i LogiMgrDaemon | head -1 | awk '{print \$2}' | xargs kill; psg -i LogiMgrDaemon"
