@@ -165,3 +165,12 @@ alias path='echo -e ${PATH//:/\\n}'
 
 # Kill LogiTech Mgr Daemon - and check it auto restarts!
 alias logikill="psg -i LogiMgrDaemon | head -1 | awk '{print \$2}' | xargs kill; psg -i LogiMgrDaemon"
+
+# kubernetes aliases
+alias minikubedash="minikube dashboard &"
+alias linkerddash="linkerd dashboard &"
+
+#kubectl for k3s
+alias kubeuse="kubectl config use-context "
+alias kubecv="kubectl config view"
+alias kubecvm="kubectl config view --minify"
