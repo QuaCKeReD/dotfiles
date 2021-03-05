@@ -65,10 +65,10 @@ eval "$(jenv init -)"
 
 # Google Cloud SDK
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/mark/Applications.sync/google-cloud-sdk/path.bash.inc' ]; then . '/Users/mark/Applications.sync/google-cloud-sdk/path.bash.inc'; fi
+if [ -f '$HOME/Applications.sync/google-cloud-sdk/path.bash.inc' ]; then . '$HOME/Applications.sync/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/mark/Applications.sync/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/mark/Applications.sync/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f '$HOME/Applications.sync/google-cloud-sdk/completion.bash.inc' ]; then . '$HOME/Applications.sync/google-cloud-sdk/completion.bash.inc'; fi
 
 #PERL
 #By default non-brewed cpan modules are installed to the Cellar. If you wish for your modules to persist across updates we recommend using `local::lib`.
