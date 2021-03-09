@@ -5,58 +5,58 @@
 #
 
 #brew to install gui for brew :)
-brew cask install cakebrew
+brew install --cask cakebrew
 
 # Java
-#brew cask install caskroom/versions/java7
+#brew install --cask caskroom/versions/java7
 # Default use java8
-brew cask install java
+brew install --cask java
 
-brew cask install 1password
+brew install --cask 1password
 
-brew cask install iterm2
+brew install --cask iterm2
 
-brew cask install cyberduck
+brew install --cask cyberduck
 
-brew cask install dropbox
-brew cask install google-drive
+brew install --cask dropbox
+brew install --cask google-drive
 
-brew cask install skype
-brew cask install zoom
-brew cask install slack
+brew install --cask skype
+brew install --cask zoom
+brew install --cask slack
 
-brew cask install alfred
+brew install --cask alfred
 brew cask alfred link
 
-brew cask install onyx
+brew install --cask onyx
 
 # for compare file
 brew cask diffmerge
 
 # VM
-brew cask install virtualbox
-brew cask install vagrant
+brew install --cask virtualbox
+brew install --cask vagrant
 vagrant plugin install vagrant-vbguest
-brew cask install docker
+brew install --cask docker
 
 # DB Monitor
-#brew cask install sequel-pro
-#brew cask install pgadmin3
-#brew cask install dbeaver-enterprise
+#brew install --cask sequel-pro
+#brew install --cask pgadmin3
+#brew install --cask dbeaver-enterprise
 
 #Redis Monitor
-#brew cask install rdm
+#brew install --cask rdm
 
 # browser
-#brew cask install google-chrome
-#brew cask install google-chrome-canary
-#brew cask install firefox
-#brew cask install firefox-beta
-#brew cask install safari-technology-preview
+#brew install --cask google-chrome
+#brew install --cask google-chrome-canary
+#brew install --cask firefox
+#brew install --cask firefox-beta
+#brew install --cask safari-technology-preview
 
 # Personal Kanban
-#brew cask install teamviz
-#brew cask install tomighty
+#brew install --cask teamviz
+#brew install --cask tomighty
 
 
 
