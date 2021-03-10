@@ -38,6 +38,7 @@ brew install --cask virtualbox
 brew install --cask vagrant
 vagrant plugin install vagrant-vbguest
 brew install --cask docker
+brew install --cask multipass
 
 # DB Monitor
 #brew install --cask sequel-pro
