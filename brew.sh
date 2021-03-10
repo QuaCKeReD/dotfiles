@@ -162,19 +162,13 @@ brew install minikube
 brew install htop-osx
 brew install hping
 
-# AppD dashbaording
+# AppD dashboarding
 brew install graphviz
 
 # Remove outdated versions from the cellar.
 brew cleanup
 
 
-#
-# Utils
-#
-
-#https://github.com/karaggeorge/macos-audio-devices
-npm install -g macos-audio-devices
 
 
 
