@@ -115,15 +115,12 @@ brew install openssl
 #macOS already has curl
 #brew install curl
 brew install ctags
-# https://duck.sh/
-brew install duck
 
 # Programing language
 brew install node
 brew install scala
 brew install go
 brew install lua
-
 brew install python
 brew link --overwrite python
 #ln -s /usr/local/bin/python3 /usr/local/bin/python
@@ -132,11 +129,20 @@ brew install pipenv
 #Install CSVKit and check to make sure that it is in your path
 pip install csvkit
 
-
 # development
 brew install maven
 brew install gradle
 brew install ansible
+brew install awscli
+# for compare file
+brew install --cask diffmerge
+
+#
+# Java
+#
+#brew install --cask caskroom/versions/java7
+# Default use java8
+brew install --cask java
 
 brew install jenv
 exec $SHELL -l
@@ -152,29 +158,80 @@ jenv shell system
 jenv versions
 jenv doctor
 
-# IAAS cli
-brew install awscli
+#
+# CASKS
+#
+
+#brew to install gui for brew :)
+brew install --cask cakebrew
+
+# Essentials
+brew install --cask 1password
+brew install --cask iterm2
+brew install --cask alfred
+brew cask alfred link
+
+brew install --cask cyberduck
+# https://duck.sh/
+brew install duck
+
+# browser
+#brew install --cask google-chrome
+#brew install --cask google-chrome-canary
+#brew install --cask firefox
+#brew install --cask firefox-beta
+#brew install --cask safari-technology-preview
+
+# File sharing
+brew install --cask dropbox
+brew install --cask google-drive
+
+# Communications
+brew install --cask skype
+brew install --cask zoom
+brew install --cask slack
+
+# VM
+brew install --cask virtualbox
+brew install --cask vagrant
+vagrant plugin install vagrant-vbguest
+brew install --cask docker
+brew install --cask multipass
+
+# Kubernetes
 brew install kubernetes-cli
 brew install minikube
+# K8s dashboards
+brew install --cask lens
+brew install octant
+
+# DB Monitor
+#brew install --cask sequel-pro
+#brew install --cask pgadmin3
+#brew install --cask dbeaver-enterprise
+
+# Redis Monitor
+#brew install --cask rdm
+
+# Personal Kanban
+#brew install --cask teamviz
+#brew install --cask tomighty
 
 # System Monitor
 #brew cask install istat-menus4
 brew install htop-osx
 brew install hping
 
+# Others
+brew install --cask onyx
+
 # AppD dashboarding
 brew install graphviz
 
+#####
 # Remove outdated versions from the cellar.
 brew cleanup
-
-
-
-
-
-
-
-
-
+#####
+# EOF
 
 
