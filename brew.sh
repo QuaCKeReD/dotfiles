@@ -140,14 +140,19 @@ brew install --cask diffmerge
 #
 # Java
 #
-#brew install --cask caskroom/versions/java7
-# Default use java8
-brew install --cask java
-
 brew install jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 exec $SHELL -l
-# https://github.com/gcuisinier/jenv
-#eval "$(jenv init -)"
+
+brew install java
+sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+jenv add /Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home
+
+brew tap AdoptOpenJDK/openjdk
+brew install adoptopenjdk8
+jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+
 jenv enable-plugin export
 jenv enable-plugin gradle
 jenv enable-plugin maven
