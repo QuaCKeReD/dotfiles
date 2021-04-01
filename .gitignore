@@ -1,3 +1,6 @@
+#Private details
+.extra
+
 # Compiled Python files
 *.pyc
 
@@ -19,3 +22,4 @@ Thumbs.db
 
 #venv files
 .venv
+
