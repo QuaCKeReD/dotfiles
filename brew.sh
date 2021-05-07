@@ -57,9 +57,9 @@ brew install sfnt2woff-zopfli
 brew install woff2
 
 brew tap homebrew/cask-fonts
-brew cask install font-source-code-pro
-brew cask install font-fontawesome
-brew cask install font-inconsolata-dz-for-powerline
+brew install --cask font-source-code-pro
+brew install --cask font-fontawesome
+brew install --cask font-inconsolata-dz-for-powerline
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install aircrack-ng
