@@ -174,7 +174,7 @@ brew install --cask cakebrew
 brew install --cask 1password
 brew install --cask iterm2
 brew install --cask alfred
-brew cask alfred link
+# brew cask alfred link
 
 brew install --cask cyberduck
 # https://duck.sh/
