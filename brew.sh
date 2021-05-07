@@ -123,7 +123,9 @@ brew install go
 brew install lua
 brew install python
 brew link --overwrite python
+#brew unlink python@3.9 && brew link python@3.9
 #ln -s /usr/local/bin/python3 /usr/local/bin/python
+
 sudo easy_install pip
 brew install pipenv
 #Install CSVKit and check to make sure that it is in your path
