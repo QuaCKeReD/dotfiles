@@ -205,6 +205,7 @@ brew install --cask multipass
 
 # Kubernetes
 brew install kubernetes-cli
+brew link --overwrite kubernetes-cli
 brew install minikube
 # K8s dashboards
 brew install --cask lens
