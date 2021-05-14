@@ -36,18 +36,18 @@ prompt_git() {
 	else
 		# Check for uncommitted changes in the index.
 		if ! $(git diff --quiet --ignore-submodules --cached); then
-#			s+='+';
-			s+='c';
+			s+='+';
+			# s+='c';
 		fi;
 		# Check for unstaged changes.
 		if ! $(git diff-files --quiet --ignore-submodules --); then
-#			s+='!';
-			s+='s';
+			s+='!';
+			# s+='s';
 		fi;
 		# Check for untracked files.
 		if [ -n "$(git ls-files --others --exclude-standard)" ]; then
-#			s+='?';
-			s+='t';
+			s+='?';
+			# s+='t';
 		fi;
 		# Check for stashed files.
 		if $(git rev-parse --verify refs/stash &>/dev/null); then
@@ -114,8 +114,8 @@ PS1+="\[${userStyle}\]\u"; # username
 PS1+="\[${white}\] at ";
 PS1+="\[${hostStyle}\]\h"; # host
 PS1+="\[${white}\] in ";
-PS1+="\[${blue}\]\w"; # working directory full path
-PS1+="\$(prompt_git \"\[${white}\] on \[${cyan}\]\" \"\[${green}\]\")"; # Git repository details
+PS1+="\[${green}\]\w"; # working directory full path
+PS1+="\$(prompt_git \"\[${white}\] on \[${violet}\]\" \"\[${blue}\]\")"; # Git repository details
 PS1+="\n";
 PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
 export PS1;
