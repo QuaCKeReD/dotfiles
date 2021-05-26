@@ -45,7 +45,8 @@ defaults write NSGlobalDomain NSUseAnimatedFocusRing -bool false
 defaults write NSGlobalDomain NSToolbarTitleViewRolloverDelay -float 0
 
 # Adjust Dock autohide delay
-defaults write com.apple.Dock autohide-delay -float 0.15
+defaults write com.apple.Dock autohide-delay -float 0.3
+killAll Dock
 
 # Disable smooth scrolling
 # (Uncomment if you’re on an older Mac that messes up the animation)
