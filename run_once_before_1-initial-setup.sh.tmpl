@@ -1,0 +1,92 @@
+#!/usr/bin/env bash
+
+echo "###########################################################"
+echo "Running: $0"
+echo "###########################################################"
+
+# Ask for the administrator password upfront.
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until the script has finished.
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+########################################
+{{ if eq .chezmoi.os "darwin" -}}
+
+echo "###########################################################"
+echo "Changing login shell..."
+chsh -s "/bin/bash"
+echo "###########################################################"
+echo
+
+echo "###########################################################"
+newHostname={{ .newHostname }}
+echo "newHostname: ${newHostname}"
+echo "###########################################################"
+echo "Before;"
+echo "ComputerName:  $(sudo scutil --get ComputerName)"
+echo "HostName:      $(sudo scutil --get HostName)"
+echo "LocalHostName: $(sudo scutil --get LocalHostName)"
+echo "###########################################################"
+echo "Setting to ${newHostname} now... (you will be prompted for password)"
+sudo scutil --set ComputerName ${newHostname}
+sudo scutil --set HostName ${newHostname}
+sudo scutil --set LocalHostName ${newHostname}
+echo "###########################################################"
+echo "After;"
+echo "ComputerName:  $(sudo scutil --get ComputerName)"
+echo "HostName:      $(sudo scutil --get HostName)"
+echo "LocalHostName: $(sudo scutil --get LocalHostName)"
+echo "###########################################################"
+echo
+
+echo "###########################################################"
+echo "Opening System Settings, please change the following;"
+echo "- Enable Remote Management & Remote Login in Sharing"
+echo "- Disable 'Close windows when quitting an application'"
+echo "    under Settings>Desktop&Dock>Windows&Apps"
+echo "- Enable Documents & Desktop in iCloud"
+echo
+echo "Close System Settings ONLY when finished"
+echo "###########################################################"
+nohup open "/System/Applications/System Settings.app" --wait
+echo "###########################################################"
+echo
+
+echo "###########################################################"
+echo "Installing XCode CommandLine Dev Tools...if not already done"
+nohup xcode-select --install
+# nohup sudo xcode-select -switch /Library/Developer/CommandLineTools/
+echo "###########################################################"
+if [ $(uname -m) == "arm64" ]; then
+  echo "ARM detected, installing Rosetta..."
+	sudo softwareupdate --install-rosetta
+fi
+echo "###########################################################"
+echo
+
+########################################
+{{ else if eq .chezmoi.os "linux" -}}
+
+echo "###########################################################"
+newHostname={{ .newHostname }}
+echo "newHostname: ${newHostname}"
+echo "###########################################################"
+echo "Before;"
+echo "Static Hostname:  $(hostnamectl --static)"
+echo "###########################################################"
+echo "Setting to ${newHostname} now... (you will be prompted for password)"
+sudo hostnamectl set-hostname ${newHostname}
+echo "###########################################################"
+echo "After;"
+echo "Static Hostname:  $(hostnamectl --static)"
+echo "###########################################################"
+echo
+
+sudo apt install git -y
+sudo apt install build-essential -y
+sudo apt install curl
+sudo apt install openssh-server
+
+########################################
+{{ end -}}

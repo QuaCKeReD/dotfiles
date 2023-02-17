@@ -1,0 +1,7 @@
+tap "1password/tap"
+tap "adoptopenjdk/openjdk"
+tap "danielfoehrkn/switch"
+tap "homebrew/autoupdate"
+tap "homebrew/cask-fonts"
+tap "jandedobbeleer/oh-my-posh"
+tap "mas-cli/tap"

@@ -1,0 +1,4 @@
+{{- $newHostname := promptStringOnce . "newHostname" "What is the new hostname?" -}}
+
+[data]
+  newHostname = {{ $newHostname | quote }}

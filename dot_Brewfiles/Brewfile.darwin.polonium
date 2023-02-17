@@ -1,0 +1,4 @@
+cask "istat-server"
+cask "plex-media-server"
+cask "powerpanel"
+cask "utm"
