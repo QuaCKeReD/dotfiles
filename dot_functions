@@ -234,3 +234,8 @@ function unlinkFolder() {
 	echo "Copying: ${dest} to ${1}"
 	cp -r "${dest}" ./"${1}"/
 }
+
+function killport {
+	echo '🚨 Killing all processes at port' $1
+	lsof -ti tcp:$1 | xargs kill
+}
