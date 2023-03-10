@@ -37,14 +37,20 @@ if [ ${HOSTNAME%.*} == "bismuth" ]; then
 fi
 if [ ${HOSTNAME%.*} == "polonium" ]; then
   relinkFolder ~/Documents.local /Volumes/Data/Users/mark/Documents.local
+  relinkFolder ~/Movies /Volumes/Data/Users/mark/Movies
+  relinkFolder ~/Music /Volumes/Data/Users/mark/Music
+  relinkFolder ~/Pictures /Volumes/Data/Users/mark/Pictures
+
   relinkFolder ~/Dropbox /Volumes/Data/Users/mark/Dropbox
 
   relinkFolder ~/Backups /Volumes/Data/Users/mark/Backups
   relinkFolder ~/bin /Volumes/Data/Users/mark/bin
   relinkFolder ~/config /Volumes/Data/Users/mark/config
+  relinkFolder ~/Data /Volumes/Data/Users/mark/Data
   relinkFolder ~/Images /Volumes/Data/Users/mark/Images
   relinkFolder ~/Installs /Volumes/Data/Users/mark/Installs
   relinkFolder ~/projects /Volumes/Data/Users/mark/projects
+  relinkFolder ~/VMs /Volumes/Data/Users/mark/VMs
   relinkFolder ~/web /Volumes/Data/Users/mark/web
   relinkFolder ~/Work /Volumes/Data/Users/mark/Work
 fi
@@ -54,7 +60,12 @@ fi
 ########################################
 
 # Common
-relinkFolder ~/Downloads ~/Library/Mobile\ Documents/com~apple~CloudDocs/Downloads
+# relinkFolder ~/Downloads ~/Library/Mobile\ Documents/com~apple~CloudDocs/Downloads
+relinkFolder ~/Downloads/iCloud ~/Library/Mobile\ Documents/com~apple~CloudDocs/Downloads
+relinkFolder ~/Pictures/iCloud ~/Library/Mobile\ Documents/com~apple~CloudDocs/Pictures
+relinkFolder ~/Music/iCloud ~/Library/Mobile\ Documents/com~apple~CloudDocs/Music
+relinkFolder ~/Movies/iCloud ~/Library/Mobile\ Documents/com~apple~CloudDocs/Movies
+
 relinkFolder ~/.ssh ~/config/.ssh/
 # relinkFolder ~/.config ~/config/.config/
 relinkFolder ~/.config/gcloud ~/config/.config/gcloud
