@@ -69,7 +69,9 @@ relinkFolder ~/Movies/iCloud ~/Library/Mobile\ Documents/com~apple~CloudDocs/Mov
 relinkFolder ~/.ssh ~/config/.ssh/
 # relinkFolder ~/.config ~/config/.config/
 relinkFolder ~/.config/gcloud ~/config/.config/gcloud
+relinkFolder ~/.config/k9s ~/config/.config/k9s
 relinkFolder ~/.config/karabiner ~/config/.config/karabiner
+relinkFolder ~/.config/mc ~/config/.config/mc
 relinkFolder ~/.config/raycast ~/config/.config/raycast
 
 # Applications
