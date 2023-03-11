@@ -26,6 +26,7 @@ brew "jq"
 brew "k9s"
 brew "kubernetes-cli", link: false
 brew "mas-cli/tap/mas"
+brew "mc"
 brew "moreutils"
 brew "neofetch"
 brew "node"
