@@ -19,55 +19,44 @@ echo "Relinking folders..."
 # Per Machine
 ########################################
 if [ ${HOSTNAME%.*} == "bismuth" ]; then
-  relinkFolder ~/Documents.local /Volumes/Data/Users/mark/Documents.local
-  relinkFolder ~/Movies /Volumes/Data/Users/mark/Movies
-  relinkFolder ~/Music /Volumes/Data/Users/mark/Music
+  relinkFolder ~/Downloads /Volumes/Data/Users/mark/Downloads
   relinkFolder ~/Pictures /Volumes/Data/Users/mark/Pictures
-
-  relinkFolder ~/Backups /Volumes/Data/Users/mark/Backups
-  relinkFolder ~/bin /Volumes/Data/Users/mark/bin
-  relinkFolder ~/config /Volumes/Data/Users/mark/config
-  relinkFolder ~/Data /Volumes/Data/Users/mark/Data
-  relinkFolder ~/Images /Volumes/Data/Users/mark/Images
-  relinkFolder ~/Installs /Volumes/Data/Users/mark/Installs
-  relinkFolder ~/projects /Volumes/Data/Users/mark/projects
-  relinkFolder ~/VMs /Volumes/Data/Users/mark/VMs
-  relinkFolder ~/web /Volumes/Data/Users/mark/web
-  relinkFolder ~/Work /Volumes/Data/Users/mark/Work
+  relinkFolder ~/Music /Volumes/Data/Users/mark/Music
+  relinkFolder ~/Movies /Volumes/Data/Users/mark/Movies
 fi
 if [ ${HOSTNAME%.*} == "polonium" ]; then
-  relinkFolder ~/Documents.local /Volumes/Data/Users/mark/Documents.local
-  relinkFolder ~/Movies /Volumes/Data/Users/mark/Movies
-  relinkFolder ~/Music /Volumes/Data/Users/mark/Music
+  relinkFolder ~/Downloads /Volumes/Data/Users/mark/Downloads
   relinkFolder ~/Pictures /Volumes/Data/Users/mark/Pictures
-
-  relinkFolder ~/Dropbox /Volumes/Data/Users/mark/Dropbox
-
-  relinkFolder ~/Backups /Volumes/Data/Users/mark/Backups
-  relinkFolder ~/bin /Volumes/Data/Users/mark/bin
-  relinkFolder ~/config /Volumes/Data/Users/mark/config
-  relinkFolder ~/Data /Volumes/Data/Users/mark/Data
-  relinkFolder ~/Images /Volumes/Data/Users/mark/Images
-  relinkFolder ~/Installs /Volumes/Data/Users/mark/Installs
-  relinkFolder ~/projects /Volumes/Data/Users/mark/projects
-  relinkFolder ~/VMs /Volumes/Data/Users/mark/VMs
-  relinkFolder ~/web /Volumes/Data/Users/mark/web
-  relinkFolder ~/Work /Volumes/Data/Users/mark/Work
+  relinkFolder ~/Music /Volumes/Data/Users/mark/Music
+  relinkFolder ~/Movies /Volumes/Data/Users/mark/Movies
 fi
 
 ########################################
 # Global
 ########################################
 
-# Common
-# relinkFolder ~/Downloads ~/Library/Mobile\ Documents/com~apple~CloudDocs/Downloads
+# iCloud
 relinkFolder ~/Downloads/iCloud ~/Library/Mobile\ Documents/com~apple~CloudDocs/Downloads
 relinkFolder ~/Pictures/iCloud ~/Library/Mobile\ Documents/com~apple~CloudDocs/Pictures
 relinkFolder ~/Music/iCloud ~/Library/Mobile\ Documents/com~apple~CloudDocs/Music
 relinkFolder ~/Movies/iCloud ~/Library/Mobile\ Documents/com~apple~CloudDocs/Movies
 
-relinkFolder ~/.ssh ~/config/.ssh/
-# relinkFolder ~/.config ~/config/.config/
+# Dropbox
+test -d ~/Library/CloudStorage/Dropbox-Personal && DropboxFolderName="Dropbox-Personal" || DropboxFolderName="Dropbox"
+echo "Using Dropbox Folder Name: ${DropboxFolderName}"
+mkdir ~/Dropbox
+relinkFolder ~/Dropbox/Personal ~/Library/CloudStorage/${DropboxFolderName}
+relinkFolder ~/Backups ~/Library/CloudStorage/${DropboxFolderName}/Backups
+relinkFolder ~/bin ~/Library/CloudStorage/${DropboxFolderName}/bin
+relinkFolder ~/config ~/Library/CloudStorage/${DropboxFolderName}/config/
+relinkFolder ~/Images ~/Library/CloudStorage/${DropboxFolderName}/Images
+relinkFolder ~/Installs ~/Library/CloudStorage/${DropboxFolderName}/Installs
+relinkFolder ~/Projects ~/Library/CloudStorage/${DropboxFolderName}/Projects
+relinkFolder ~/VMs ~/Library/CloudStorage/${DropboxFolderName}/VMs
+relinkFolder ~/web ~/Library/CloudStorage/${DropboxFolderName}/web
+relinkFolder ~/Work ~/Library/CloudStorage/${DropboxFolderName}/Work
+
+# .config
 relinkFolder ~/.config/gcloud ~/config/.config/gcloud
 relinkFolder ~/.config/k9s ~/config/.config/k9s
 relinkFolder ~/.config/karabiner ~/config/.config/karabiner
@@ -75,6 +64,7 @@ relinkFolder ~/.config/mc ~/config/.config/mc
 relinkFolder ~/.config/raycast ~/config/.config/raycast
 
 # Applications
+relinkFolder ~/.ssh ~/config/.ssh/
 relinkFolder ~/.ansible ~/config/.ansible/
 relinkFolder ~/.aws ~/config/.aws/
 relinkFolder ~/.gitkraken ~/config/.gitkraken/
