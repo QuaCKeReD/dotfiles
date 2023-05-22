@@ -31,7 +31,7 @@ eval "$($(brew --prefix)/bin/brew shellenv)"
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 # JENV - relies on .exports having been sourced
-test -e "${HOME}/.jenv/bin/jenv" && eval "$(jenv init -)"
+test -e "$(which jenv)" && eval "$(jenv init -)"
 
 # PERL
 #By default non-brewed cpan modules are installed to the Cellar. If you wish for your modules to persist across updates we recommend using `local::lib`.
