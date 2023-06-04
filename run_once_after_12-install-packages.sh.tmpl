@@ -52,12 +52,12 @@ if [ "$OS_VER" -ge "11" ]; then
   echo "###########################################################"
   brew bundle --file ~/.Brewfiles/Brewfile.{{ .chezmoi.os }}._current.cask
 
-  if [ -f "~/Library/Preferences/com.apple.appstorecomponentsd" ]; then
+#  if [ -f "~/Library/Preferences/com.apple.appstorecomponentsd" ]; then
     echo "###########################################################"
     echo "Brewing bundle: Brewfile.{{ .chezmoi.os }}._current.mas"
     echo "###########################################################"
     brew bundle --file ~/.Brewfiles/Brewfile.{{ .chezmoi.os }}._current.mas
-  fi
+#  fi
 fi
 
 ########################################
