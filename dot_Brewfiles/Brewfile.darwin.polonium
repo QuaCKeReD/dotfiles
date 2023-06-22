@@ -1,9 +1,6 @@
 # Named Brewfile
 # For any machine matching the hostname
 
-# include other files
-instance_eval(File.read(".Brewfile.darwin._active_"))
-
 # 'brew install --cask'
 cask "plex-media-server"
 cask "powerpanel"

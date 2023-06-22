@@ -64,7 +64,7 @@ cask "zoom"
 
 # 'mas install'
 mas "1Password for Safari", id:1569813296
-mas "Actions" for Obsidian, id:1659667937
+mas "Actions for Obsidian", id:1659667937
 mas "Actions", id:1586435171
 mas "AdGuard Home Remote", id:1543143740
 mas "Amphetamine", id:937984704
