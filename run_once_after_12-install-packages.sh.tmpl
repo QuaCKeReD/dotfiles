@@ -10,16 +10,11 @@ echo "###########################################################"
 test -f /usr/local/bin/brew && eval "$(/usr/local/bin/brew shellenv)"
 test -f /opt/homebrew/bin/brew && eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Current installs - macOS
+# Common installs - macOS
 echo "###########################################################"
-echo "Brewing bundle: Brewfile.{{ .chezmoi.os }}._common.tap"
+echo "Brewing bundle: Brewfile.{{ .chezmoi.os }}._common"
 echo "###########################################################"
-brew bundle --file ~/.Brewfiles/Brewfile.{{ .chezmoi.os }}._common.tap
-
-echo "###########################################################"
-echo "Brewing bundle: Brewfile.{{ .chezmoi.os }}._common.cask"
-echo "###########################################################"
-brew bundle --file ~/.Brewfiles/Brewfile.{{ .chezmoi.os }}._common.cask
+brew bundle --file ~/.Brewfiles/Brewfile.{{ .chezmoi.os }}._common
 
 ########################################
 # Only run on 'supported' OS versions
@@ -38,25 +33,15 @@ if [ "$OS_VER" -ge "11" ]; then
 
   # Current installs - macOS
   echo "###########################################################"
-  echo "Brewing bundle: Brewfile.{{ .chezmoi.os }}._current.tap"
+  echo "Brewing bundle: Brewfile.{{ .chezmoi.os }}._current"
   echo "###########################################################"
-  brew bundle --file ~/.Brewfiles/Brewfile.{{ .chezmoi.os }}._current.tap
-
-  echo "###########################################################"
-  echo "Brewing bundle: Brewfile.{{ .chezmoi.os }}._current.brew"
-  echo "###########################################################"
-  brew bundle --file ~/.Brewfiles/Brewfile.{{ .chezmoi.os }}._current.brew
-
-  echo "###########################################################"
-  echo "Brewing bundle: Brewfile.{{ .chezmoi.os }}._current.cask"
-  echo "###########################################################"
-  brew bundle --file ~/.Brewfiles/Brewfile.{{ .chezmoi.os }}._current.cask
+  brew bundle --file ~/.Brewfiles/Brewfile.{{ .chezmoi.os }}._current
 
 #  if [ -f "~/Library/Preferences/com.apple.appstorecomponentsd" ]; then
-    echo "###########################################################"
-    echo "Brewing bundle: Brewfile.{{ .chezmoi.os }}._current.mas"
-    echo "###########################################################"
-    brew bundle --file ~/.Brewfiles/Brewfile.{{ .chezmoi.os }}._current.mas
+#    echo "###########################################################"
+#    echo "Brewing bundle: Brewfile.{{ .chezmoi.os }}._current.mas"
+#    echo "###########################################################"
+#    brew bundle --file ~/.Brewfiles/Brewfile.{{ .chezmoi.os }}._current.mas
 #  fi
 fi
 
@@ -70,14 +55,9 @@ brew install gcc
 
 # Common installs - Linux
 echo "###########################################################"
-echo "Brewing bundle: Brewfile.{{ .chezmoi.os }}._common.tap"
+echo "Brewing bundle: Brewfile.{{ .chezmoi.os }}._common"
 echo "###########################################################"
-brew bundle --file ~/.Brewfiles/Brewfile.{{ .chezmoi.os }}._common.tap
-
-echo "###########################################################"
-echo "Brewing bundle: Brewfile.{{ .chezmoi.os }}._common.brew"
-echo "###########################################################"
-brew bundle --file ~/.Brewfiles/Brewfile.{{ .chezmoi.os }}._common.brew
+brew bundle --file ~/.Brewfiles/Brewfile.{{ .chezmoi.os }}._common
 
 ########################################
 {{ end -}}

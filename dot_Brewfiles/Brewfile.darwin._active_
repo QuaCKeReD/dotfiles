@@ -1,0 +1,97 @@
+# Live Brewfile
+# For any machine in general use
+
+# 'brew tap'
+tap "danielfoehrkn/switch"
+tap "homebrew/autoupdate"
+tap "jandedobbeleer/oh-my-posh"
+tap "mas-cli/tap"
+
+# 'brew install'
+brew "ansible"
+brew "awscli"
+brew "coreutils"
+brew "danielfoehrkn/switch/switch"
+brew "duck"
+brew "go"
+brew "gradle"
+brew "graphviz"
+brew "jandedobbeleer/oh-my-posh/oh-my-posh"
+brew "k9s"
+brew "kubernetes-cli", link: false
+brew "mas-cli/tap/mas"
+brew "mc"
+brew "node"
+brew "perl"
+brew "php"
+brew "pipenv"
+brew "python"
+
+# 'brew install --cask'
+cask "balenaetcher"
+cask "bookmacster"
+cask "citrix-workspace"
+cask "codekit"
+cask "customshortcuts"
+cask "deltawalker"
+cask "diffmerge"
+cask "discord"
+cask "google-cloud-sdk"
+cask "imazing"
+cask "jiggler"
+cask "keycue"
+cask "kubenav"
+cask "lens"
+cask "maestral"
+cask "microsoft-teams"
+cask "pacifist"
+cask "packet-peeper"
+cask "pdf-expert"
+cask "plex"
+cask "postman"
+cask "raindropio"
+cask "raspberry-pi-imager"
+cask "raycast"
+cask "shortcat"
+cask "skype"
+cask "slack"
+cask "soundsource"
+cask "teamviewer"
+cask "todoist"
+cask "webex-meetings"
+cask "webex"
+cask "zoom"
+
+# 'mas install'
+mas "1Password for Safari", id:1569813296
+mas "Actions" for Obsidian, id:1659667937
+mas "Actions", id:1586435171
+mas "AdGuard Home Remote", id:1543143740
+mas "Amphetamine", id:937984704
+mas "Automounter", id:1160435653
+mas "Data Jar", id:1453273600
+mas "Disk Speed Test", id:425264550
+mas "Drafts", id:1435957248
+mas "iNet Network Scanner", id:403304796
+mas "Keepa - Price Tracker", id:1533805339
+mas "Mapper", id:1589391989
+mas "NextDNS", id:1464122853
+mas "Numbers", id:409203825
+mas "Okta Extension App", id:1439967473
+mas "Reeder", id:1529448980
+mas "Refined GitHub", id:1519867270
+mas "Save to Raindrop.io", id:1549370672
+mas "SessionRestore", id:1463334954
+mas "Sharebot", id:1597340986
+mas "Spark", id:1176895641
+mas "Speedtest", id:1153157709
+mas "Surfed", id:1591590700
+mas "TestFlight", id:899247664
+mas "Timery", id:1425368544
+mas "Trello", id:1278508951
+mas "Turtle Beach Audio Hub", id:948410748
+mas "Typeeto", id:970502923
+mas "WiFi Signal", id:525912054
+mas "WireGuard", id:1451685025
+mas "WorldWideWeb Desktop", id:1621370168
+mas "xSearch", id:1579902068

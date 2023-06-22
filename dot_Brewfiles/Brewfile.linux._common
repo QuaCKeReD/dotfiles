@@ -1,3 +1,15 @@
+# Common Brewfile
+# For any machine being installed
+
+# 'brew tap'
+tap "adoptopenjdk/openjdk"
+tap "homebrew/autoupdate"
+tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "jandedobbeleer/oh-my-posh"
+
+# 'brew install'
 brew "chezmoi"
 brew "bash-completion@2"
 brew "bash"

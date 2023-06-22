@@ -1,3 +1,15 @@
+# Common Brewfile
+# For any machine being installed
+
+# 'brew tap'
+tap "homebrew/core"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "buo/cask-upgrade"
+tap "homebrew/cask-fonts"
+tap "1password/tap"
+
+# 'brew install'
 cask "1password-cli"
 cask "1password"
 cask "adguard"

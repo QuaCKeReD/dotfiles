@@ -1,6 +1,0 @@
-tap "adoptopenjdk/openjdk"
-tap "homebrew/autoupdate"
-tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
-tap "homebrew/core"
-tap "jandedobbeleer/oh-my-posh"

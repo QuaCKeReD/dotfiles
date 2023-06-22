@@ -1,1 +1,5 @@
+# Named Brewfile
+# For any machine matching the hostname
+
+# 'brew install --cask'
 cask "virtualbox"
