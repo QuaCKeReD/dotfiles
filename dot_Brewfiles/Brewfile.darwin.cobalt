@@ -2,7 +2,7 @@
 # For any machine matching the hostname
 
 # include other files
-instance_eval(File.read(".Brewfile.darwin._active_"))
+instance_eval(File.read("Brewfile.darwin._active_"))
 
 # 'brew install --cask'
 cask "bunch"
