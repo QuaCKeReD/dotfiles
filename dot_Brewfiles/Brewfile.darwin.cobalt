@@ -5,7 +5,6 @@ cask "logitech-presentation"
 cask "lunar"
 cask "nordvpn"
 cask "utm"
-cask "virtualbox"
 cask "whatsapp"
 mas "Turtle Beach Audio Hub", id:948410748
 mas "Typeeto", id:970502923
