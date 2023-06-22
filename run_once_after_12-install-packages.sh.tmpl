@@ -70,5 +70,13 @@ if [ -f ~/.Brewfiles/Brewfile.{{ .chezmoi.os }}.{{ .chezmoi.hostname }} ]; then
   brew bundle --file ~/.Brewfiles/Brewfile.{{ .chezmoi.os }}.{{ .chezmoi.hostname }}
 fi
 
+# Active installs
+{{ if eq .chezmoi.hostname "polonium" "cobalt" -}}
+  echo "###########################################################"
+  echo "Brewing bundle: Brewfile.darwin._active_"
+  echo "###########################################################"
+  brew bundle --file ~/.Brewfiles/Brewfile.darwin._active_
+{{ end -}}
+
 # Always exit as success
 exit 0
