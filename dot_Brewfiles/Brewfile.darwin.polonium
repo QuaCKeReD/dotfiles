@@ -3,5 +3,6 @@
 
 # 'brew install --cask'
 cask "plex-media-server"
+cask "jellyfin"
 cask "powerpanel"
 cask "utm"
