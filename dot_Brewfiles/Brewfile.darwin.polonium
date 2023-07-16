@@ -1,6 +1,9 @@
 # Named Brewfile
 # For any machine matching the hostname
 
+# 'brew install'
+brew 'ffmpeg'
+
 # 'brew install --cask'
 cask "plex-media-server"
 cask "jellyfin"
