@@ -2,10 +2,12 @@
 # For any machine matching the hostname
 
 # 'brew install --cask'
-cask "bunch"
 cask "duet"
 cask "logitech-presentation"
 cask "lunar"
 cask "onecast"
-cask "utm"
 cask "whatsapp"
+
+# 'mas install'
+mas "Controlly", id: 1548544614
+mas "One Thing", id: 1604176982
