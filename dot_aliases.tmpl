@@ -88,21 +88,12 @@ alias reload="exec ${SHELL} -l"
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
+
 # K8S
 alias k="kubectl"
 
-# alias mk="minikube"
-# alias mkk="minikube kubectl --"
-
-# alias mk="microk8s"
-# alias mkk="microk8s kubectl"
-
-alias kshell='k run -it --image bash --restart Never --rm shell'
-alias kubuntu='k run -it --image ubuntu --restart Never --rm shell'
-alias kssh='sh -c "$(curl -sSL https://raw.githubusercontent.com/AverageMarcus/kube-ssh/master/ssh.sh)"'
-
 #kubectl config
-# alias kubectx="kubectl config use-context"
+alias kubectx="k config use-context"
 alias kubeconf="k config view"
 alias kubeconfm="k config view --minify"
 
@@ -110,7 +101,21 @@ alias kubeconfm="k config view --minify"
 # alias kubedocker="k config use-context docker-desktop"
 # alias kuberpi="k config use-context k3s-rpi"
 # alias kubemicrok8s="k config use-context microk8s-cluster"
-# alias kubeminikube="k config use-context minikube-carbon"
+# alias kubeminikube="k config use-context minikube-cobalt"
+
+alias mk="minikube"
+alias mkk="minikube kubectl --"
+alias mkpodman="mk config set driver podman"
+alias mkstart="mk start --driver=podman --container-runtime=cri-o"
+
+
+
+# alias mk="microk8s"
+# alias mkk="microk8s kubectl"
+
+alias kshell='k run -it --image bash --restart Never --rm shell'
+alias kubuntu='k run -it --image ubuntu --restart Never --rm shell'
+alias kssh='sh -c "$(curl -sSL https://raw.githubusercontent.com/AverageMarcus/kube-ssh/master/ssh.sh)"'
 
 #Multipass
 alias mp="multipass"

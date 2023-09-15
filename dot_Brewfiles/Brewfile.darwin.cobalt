@@ -1,11 +1,18 @@
 # Named Brewfile
 # For any machine matching the hostname
 
+# 'brew install'
+# brew "docker"
+brew "docker-compose"
+brew "minikube"
+brew "podman"
+
 # 'brew install --cask'
 cask "duet"
 cask "logitech-presentation"
 cask "lunar"
 cask "onecast"
+cask "podman-desktop"
 cask "whatsapp"
 
 # 'mas install'
