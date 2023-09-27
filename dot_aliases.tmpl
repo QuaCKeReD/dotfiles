@@ -23,7 +23,7 @@ alias cma="chezmoi add"
 alias cmaf="chezmoi add --follow"
 test -f ${HOMEBREW_PREFIX}/bin/chezmoi && alias cmsp="$(chezmoi source-path)"
 
-alias top5="ps -eo cmd,pcpu -r | head -5; ps -eo cmd,pmem -m | head -5"
+alias top5="ps -eo pcpu,comm -r | head -5; ps -eo pmem,comm -m | head -5"
 
 alias nuget="mono /usr/local/bin/nuget.exe"
 
