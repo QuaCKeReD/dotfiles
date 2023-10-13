@@ -9,7 +9,6 @@ brew "minikube"
 brew "qpdf"
 
 # 'brew install --cask'
-cask "docker"
 cask "duet"
 cask "logitech-presentation"
 cask "lunar"
