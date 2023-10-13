@@ -2,17 +2,19 @@
 # For any machine matching the hostname
 
 # 'brew install'
-# brew "docker"
+brew "docker"
 brew "docker-compose"
 brew "minikube"
-brew "podman"
+# brew "podman"
+brew "qpdf"
 
 # 'brew install --cask'
+cask "docker"
 cask "duet"
 cask "logitech-presentation"
 cask "lunar"
 cask "onecast"
-cask "podman-desktop"
+# cask "podman-desktop"
 cask "whatsapp"
 
 # 'mas install'
