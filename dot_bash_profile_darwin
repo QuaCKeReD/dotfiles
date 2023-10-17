@@ -62,15 +62,20 @@ elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion
 fi
 
-# Google Cloud SDK
-# The next line enables shell command completion for gcloud.
-test -f '$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc' && . '$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
-
 # 1Password auto-complete
 source <(op completion bash)
 
 # oh-my-posh auto-complete
 source <(oh-my-posh completion bash)
+
+# kubectl auto-complete
+source <(kubectl completion bash)
+# Enable tab completion for `k` by marking it as an alias for `kubectl`
+complete -o default -F __start_kubectl k
+
+# Google Cloud SDK
+# The next line enables shell command completion for gcloud.
+test -f '$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc' && . '$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
 
 # Enable tab completion for `g` by marking it as an alias for `git`
 if type _git &>/dev/null; then
