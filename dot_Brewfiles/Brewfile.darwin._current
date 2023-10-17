@@ -34,7 +34,7 @@ brew "webkit2png"
 brew "wget"
 
 # 'brew install --cask'
-cask "docker"
+# cask "docker"
 cask "gitkraken"
 cask "imageoptim"
 cask "mds"
