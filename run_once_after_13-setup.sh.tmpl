@@ -101,6 +101,12 @@ echo
 
 ########################################
 {{ if eq .chezmoi.hostname "cobalt" -}}
+# NextDNS
+sudo nextdns install \
+  -profile 48686b \
+  -report-client-info \
+  -auto-activate
+
 # Java
 brew tap AdoptOpenJDK/openjdk
 brew install adoptopenjdk8
@@ -111,13 +117,13 @@ open "/System/Volumes/Data/usr/local/Caskroom/logitech-presentation/*/LogiPresen
 ########################################
 {{ end -}}
 
-echo "###########################################################"
-echo "Post Resilio sync setup;"
-echo "- Run ./.local/bin/folderRelinks.sh"
-echo "- Run ./.local/bin/setAttribs.sh"
-echo
-echo "- Setup required software"
-echo "###########################################################"
+#echo "###########################################################"
+#echo "Post Resilio sync setup;"
+#echo "- Run ./.local/bin/folderRelinks.sh"
+#echo "- Run ./.local/bin/setAttribs.sh"
+#echo
+#echo "###########################################################"
+#echo "- Setup required software"
 
 ########################################
 {{ else if eq .chezmoi.os "linux" -}}

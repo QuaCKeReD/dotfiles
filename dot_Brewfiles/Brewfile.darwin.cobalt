@@ -7,7 +7,7 @@ brew "docker-compose"
 brew "minikube"
 # brew "podman"
 # brew "podman-compose"
-
+brew "nextdns/tap/nextdns"
 
 # 'brew install --cask'
 cask "duet"
