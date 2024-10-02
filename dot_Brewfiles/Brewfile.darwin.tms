@@ -1,0 +1,8 @@
+# Named Brewfile
+# For any machine matching the hostname
+
+# 'brew install'
+
+# 'brew install --cask'
+cask "utm"
+cask "citrix-workspace"
