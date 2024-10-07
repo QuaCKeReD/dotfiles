@@ -18,5 +18,5 @@ cask "onecast"
 cask "whatsapp"
 
 # 'mas install'
-mas "Controlly", id: 1548544614
-mas "One Thing", id: 1604176982
+# mas "Controlly", id: 1548544614
+# mas "One Thing", id: 1604176982

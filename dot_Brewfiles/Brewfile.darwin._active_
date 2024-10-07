@@ -41,8 +41,8 @@ cask "imazing"
 cask "jellyfin-media-player"
 cask "jiggler"
 cask "keycue"
-cask "kubenav"
-cask "lens"
+# cask "kubenav"
+# cask "lens"
 cask "logi-options-plus"
 cask "maestral"
 cask "microsoft-teams"
@@ -54,7 +54,7 @@ cask "postman"
 cask "raindropio"
 cask "raspberry-pi-imager"
 cask "raycast"
-cask "shortcat"
+# cask "shortcat"
 cask "skype"
 cask "slack"
 cask "soundsource"
@@ -77,14 +77,14 @@ mas "Developer", id: 640199958
 mas "Disk Speed Test", id:425264550
 mas "Drafts", id:1435957248
 mas "iNet Network Scanner", id:403304796
-mas "Infuse", id: 1136220934
+# mas "Infuse", id: 1136220934
 mas "Keepa - Price Tracker", id:1533805339
 mas "Mapper", id:1589391989
 mas "NextDNS", id:1464122853
 mas "Numbers", id:409203825
 mas "Okta Extension App", id:1439967473
-mas "Reeder", id:1529448980
-mas "Refined GitHub", id:1519867270
+# mas "Reeder", id:1529448980
+# mas "Refined GitHub", id:1519867270
 mas "Save to Raindrop.io", id:1549370672
 mas "Sharebot", id:1597340986
 mas "Spark", id:1176895641
@@ -96,6 +96,6 @@ mas "Trello", id:1278508951
 mas "Turtle Beach Audio Hub", id:948410748
 mas "Typeeto", id:970502923
 mas "WiFi Signal", id:525912054
-mas "WireGuard", id:1451685025
+# mas "WireGuard", id:1451685025
 mas "WorldWideWeb Desktop", id:1621370168
 mas "xSearch", id:1579902068
