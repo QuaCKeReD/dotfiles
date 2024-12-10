@@ -6,6 +6,7 @@ tap "danielfoehrkn/switch"
 tap "homebrew/autoupdate"
 tap "jandedobbeleer/oh-my-posh"
 tap "mas-cli/tap"
+tap "grafana/grafana"
 
 # 'brew install'
 brew "ansible"

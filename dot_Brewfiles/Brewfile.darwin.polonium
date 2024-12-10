@@ -2,7 +2,9 @@
 # For any machine matching the hostname
 
 # 'brew install'
-brew 'ffmpeg'
+brew "ffmpeg"
+brew "handbrake"
+brew "grafana/grafana/alloy"
 
 # 'brew install --cask'
 cask "plex-media-server"
