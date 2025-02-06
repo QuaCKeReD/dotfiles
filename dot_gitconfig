@@ -129,6 +129,7 @@
 	# https://help.github.com/articles/signing-commits-using-gpg/
 #	gpgsign = true
 	template = ~/.stCommitMsg
+	gpgsign = false
 
 [diff]
 
@@ -186,6 +187,7 @@
 [user]
 	email = dev@mark.kellysmith.uk
 	name = Mark Kelly-Smith
+	signingkey = key::ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCbPYMQx39FKpGOcWtrR1NJ6J8osfOx8vtW7S39Ddc2uKZmNp4GnNUcj6ZlIDKDGOvIY33nKcoKUzV2oHlhHANH76huoB+pEbCnuwQ/811etw7AjyLFEff9WyuuhP6DCfBSmbVn0acC7CCh7Qlcw8VDwd+9nt/TT+A3sxDnhgkctg9pbT18k6k/XZVeJigAXBZ/1ARRNJrXO4KD+q92IRAOByJcnWCtvrIMN3fm+MZL/Pxmz0axIDPfpgM/TCAR2knrhrJ1BZFQz94UIsIYLiquno7QTVQxdFph/z0mfI0cZ5UD/9vOB3jmZp/KlqFszlziuw3JXslOqM/Sg45qbv3w9OAJxb4xkgPxtA/8Yi8wozGcwokwSOAuxw0yR2TILcrYQhZ17c9ngxoxImuIm1492sCtwOnYywz+IMTwhpS3JgQ+ge8CGuc9iVr69HQPMfJTAHKmtVg8hc1FB8a/99omfMX0GjelrSUQgcnaFRoNKsTGXboFhs6YLER93PCAj+XG3pBfrdxES9ZGiswk/mgazGao4e9eQEZyQuUVjGWOQvEjyCrti/OgILPPmrm0xo80NUZ5ywzH6DBneHh4rTHj/uFwJrAmUMG99pHCKKhZNXtwWLONgflqG1Qo8rJp9TRS/GQclQqkfGIw2T36NHIekNeTFYJImKI0GfnSam+Xiw== /Users/mark/.ssh/QuaCKeReD-GitHub
 #	signingkey = 6291AB935BDB66E7
 
 [filter "lfs"]
@@ -196,3 +198,7 @@
 
 [pull]
 	rebase = false
+	
+[gpg]
+	program = /opt/homebrew/bin/gpg
+	format = ssh
