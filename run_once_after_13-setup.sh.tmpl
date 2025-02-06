@@ -49,19 +49,20 @@ OS_VER=$(sw_vers -productVersion | cut -f 1 -d .)
 
 if [ "$OS_VER" -ge "11" ]; then
   # Java
-  sudo ln -sfn ${HOMEBREW_PREFIX}/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+#  sudo ln -sfn ${HOMEBREW_PREFIX}/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 
   # Jenv
   export PATH="$HOME/.jenv/bin:$PATH"
   eval "$(jenv init -)"
   # exec $SHELL -l
-  jenv add /Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home
+#  jenv add /Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home
+#  jenv add /Library/Java/JavaVirtualMachines/temurin-23.jdk/Contents/Home
+  jenv add `/usr/libexec/java_home`
 
   jenv enable-plugin export
   jenv enable-plugin gradle
   jenv enable-plugin maven
 
-  jenv add `/usr/libexec/java_home`
   jenv global system
   jenv shell system
   jenv versions
@@ -108,9 +109,9 @@ sudo nextdns install \
   -auto-activate
 
 # Java
-brew tap AdoptOpenJDK/openjdk
-brew install adoptopenjdk8
-jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+#brew tap AdoptOpenJDK/openjdk
+#brew install adoptopenjdk8
+#jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
 
 open "/System/Volumes/Data/usr/local/Caskroom/logitech-presentation/*/LogiPresentation Installer.app"
 

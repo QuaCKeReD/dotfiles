@@ -2,11 +2,11 @@
 # For any machine with supported macOS
 
 # 'brew tap'
-tap "adoptopenjdk/openjdk"
+
 
 # 'brew install'
-brew "bash-completion@2"
 brew "bash"
+brew "bash-completion@2"
 brew "chezmoi"
 brew "coreutils"
 brew "findutils"
@@ -20,11 +20,11 @@ brew "grep"
 brew "htop"
 brew "java"
 brew "jenv"
-brew "jq"
 brew "moreutils"
 brew "neofetch"
 brew "openssh"
 brew "openssl@3"
+brew "pandoc"
 brew "qpdf"
 brew "readline"
 brew "screen"
@@ -36,13 +36,9 @@ brew "webkit2png"
 brew "wget"
 
 # 'brew install --cask'
-cask "docker"
-cask "gitkraken"
-cask "imageoptim"
-cask "mds"
-cask "mist"
-cask "multipass"
-cask "setapp"
 cask "tailscale"
 cask "teamviewer"
-cask "visual-studio-code"
+cask "temurin"
+cask "temurin@8"
+cask "warp"
+cask "whatsapp"

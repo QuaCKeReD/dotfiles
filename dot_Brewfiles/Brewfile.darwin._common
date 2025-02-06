@@ -3,14 +3,18 @@
 
 # 'brew tap'
 #tap "homebrew/core"
-tap "homebrew/bundle"
 #tap "homebrew/cask"
+tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
 tap "buo/cask-upgrade"
 tap "1password/tap"
 
 # 'brew install'
-cask "1password-cli"
+brew "cask"
+
+# 'brew install'
 cask "1password"
+cask "1password-cli"
 cask "adguard"
 cask "alfred"
 cask "alt-tab"
@@ -30,13 +34,13 @@ cask "keyboard-maestro"
 cask "launchcontrol"
 cask "lingon-x"
 cask "little-snitch"
-cask "mountain-duck"
 cask "menuwhere"
+cask "mountain-duck"
 cask "onyx"
 cask "qlmarkdown"
 cask "resolutionator"
 cask "rocket"
-cask "screens-connect"
+#cask "screens-connect"
 cask "sf-symbols"
 cask "syntax-highlight"
 cask "timemachineeditor"

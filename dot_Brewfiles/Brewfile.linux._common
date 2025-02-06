@@ -2,7 +2,6 @@
 # For any machine being installed
 
 # 'brew tap'
-tap "adoptopenjdk/openjdk"
 tap "homebrew/autoupdate"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"

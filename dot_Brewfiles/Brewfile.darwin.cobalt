@@ -2,21 +2,18 @@
 # For any machine matching the hostname
 
 # 'brew install'
-brew "docker"
-brew "docker-compose"
 brew "minikube"
-# brew "podman"
-# brew "podman-compose"
-brew "nextdns/tap/nextdns"
 
 # 'brew install --cask'
-cask "duet"
 cask "logitech-presentation"
 cask "lunar"
 cask "onecast"
-# cask "podman-desktop"
-cask "whatsapp"
 
 # 'mas install'
 # mas "Controlly", id: 1548544614
 # mas "One Thing", id: 1604176982
+mas "Play", id: 1596506190
+mas "ReadKit", id: 1615798039
+mas "Turtle Beach Audio Hub", id:948410748
+mas "Typeeto", id:970502923
+mas "WaterMinder", id: 1415257369
