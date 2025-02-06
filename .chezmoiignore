@@ -1,7 +1,6 @@
 README.md
 {{ if ne .chezmoi.os "darwin" }}
 .bash_profile_darwin
-.local/init/quackered.omp.json
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
 .bash_profile_linux
