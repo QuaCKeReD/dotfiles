@@ -35,12 +35,6 @@ fi
 # Global
 ########################################
 
-# iCloud
-relinkFolder ~/Downloads/iCloud ~/Library/Mobile\ Documents/com~apple~CloudDocs/Downloads
-relinkFolder ~/Pictures/iCloud ~/Library/Mobile\ Documents/com~apple~CloudDocs/Pictures
-relinkFolder ~/Music/iCloud ~/Library/Mobile\ Documents/com~apple~CloudDocs/Music
-relinkFolder ~/Movies/iCloud ~/Library/Mobile\ Documents/com~apple~CloudDocs/Movies
-
 # Dropbox
 test -d ~/Library/CloudStorage/Dropbox-Personal && DropboxFolderName="Dropbox-Personal" || DropboxFolderName="Dropbox"
 echo "Using Dropbox Folder Name: ${DropboxFolderName}"
@@ -52,9 +46,13 @@ relinkFolder ~/config ~/Library/CloudStorage/${DropboxFolderName}/config/
 relinkFolder ~/Images ~/Library/CloudStorage/${DropboxFolderName}/Images
 relinkFolder ~/Installs ~/Library/CloudStorage/${DropboxFolderName}/Installs
 relinkFolder ~/Projects ~/Library/CloudStorage/${DropboxFolderName}/Projects
-relinkFolder ~/VMs ~/Library/CloudStorage/${DropboxFolderName}/VMs
 relinkFolder ~/web ~/Library/CloudStorage/${DropboxFolderName}/web
 relinkFolder ~/Work ~/Library/CloudStorage/${DropboxFolderName}/Work
+
+# backlinks
+relinkFolder ~/Movies/Dropbox ~/Library/CloudStorage/${DropboxFolderName}/Movies
+relinkFolder ~/Music/Dropbox ~/Library/CloudStorage/${DropboxFolderName}/Music
+relinkFolder ~/Pictures/Dropbox ~/Library/CloudStorage/${DropboxFolderName}/Pictures
 
 # .config
 relinkFolder ~/.config/gcloud ~/config/.config/gcloud
