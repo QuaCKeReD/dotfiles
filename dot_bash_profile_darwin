@@ -69,7 +69,7 @@ fi
 source <(op completion bash)
 
 # oh-my-posh auto-complete
-source <(oh-my-posh completion bash)
+# source <(oh-my-posh completion bash)
 
 # kubectl auto-complete
 source <(kubectl completion bash)
