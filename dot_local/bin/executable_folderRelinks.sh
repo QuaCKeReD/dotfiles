@@ -35,24 +35,37 @@ fi
 # Global
 ########################################
 
-# Dropbox
-test -d ~/Library/CloudStorage/Dropbox-Personal && DropboxFolderName="Dropbox-Personal" || DropboxFolderName="Dropbox"
-echo "Using Dropbox Folder Name: ${DropboxFolderName}"
-mkdir ~/Dropbox
-relinkFolder ~/Dropbox/Personal ~/Library/CloudStorage/${DropboxFolderName}
-relinkFolder ~/Backups ~/Library/CloudStorage/${DropboxFolderName}/Backups
-relinkFolder ~/bin ~/Library/CloudStorage/${DropboxFolderName}/bin
-relinkFolder ~/config ~/Library/CloudStorage/${DropboxFolderName}/config/
-relinkFolder ~/Images ~/Library/CloudStorage/${DropboxFolderName}/Images
-relinkFolder ~/Installs ~/Library/CloudStorage/${DropboxFolderName}/Installs
-relinkFolder ~/Projects ~/Library/CloudStorage/${DropboxFolderName}/Projects
-relinkFolder ~/web ~/Library/CloudStorage/${DropboxFolderName}/web
-relinkFolder ~/Work ~/Library/CloudStorage/${DropboxFolderName}/Work
+# Pick Cloud Storage in use
+cloudStorage="GDrive"
+# cloudStorage="Dropbox"
+
+# NB: Using full path for home folder as symlink doesnt like '~' in this case
+if [ $cloudStorage == "GDrive" ]; then
+  test -d ~/Library/CloudStorage/GoogleDrive-quackering@gmail.com && cloudStorageFolderName="/Users/mark/Library/CloudStorage/GoogleDrive-quackering@gmail.com/My Drive" || cloudStorageFolderName="/Users/mark/Library/CloudStorage/GoogleDrive-quackering@gmail.com/My Drive"
+
+elif [ $cloudStorage == "Dropbox" ]; then
+  test -d ~/Library/CloudStorage/Dropbox-Personal && cloudStorageFolderName="/Users/mark/Library/CloudStorage/Dropbox-Personal" || cloudStorageFolderName="/Users/mark/Library/CloudStorage/Dropbox"
+  mkdir ~/Dropbox
+  relinkFolder ~/Dropbox/Personal ~/Library/CloudStorage/Dropbox-Personal
+
+fi
+
+echo "Using Cloud Storage Folder Name: ${cloudStorageFolderName}"
 
 # backlinks
-relinkFolder ~/Movies/Dropbox ~/Library/CloudStorage/${DropboxFolderName}/Movies
-relinkFolder ~/Music/Dropbox ~/Library/CloudStorage/${DropboxFolderName}/Music
-relinkFolder ~/Pictures/Dropbox ~/Library/CloudStorage/${DropboxFolderName}/Pictures
+relinkFolder ~/Movies/${cloudStorage} "${cloudStorageFolderName}/Movies"
+relinkFolder ~/Music/${cloudStorage} "${cloudStorageFolderName}/Music"
+relinkFolder ~/Pictures/${cloudStorage} "${cloudStorageFolderName}/Pictures"
+
+# main folders
+relinkFolder ~/Backups "${cloudStorageFolderName}/Backups"
+relinkFolder ~/bin "${cloudStorageFolderName}/bin"
+relinkFolder ~/config "${cloudStorageFolderName}/config"
+relinkFolder ~/Images "${cloudStorageFolderName}/Images"
+relinkFolder ~/Installs "${cloudStorageFolderName}/Installs"
+relinkFolder ~/Projects "${cloudStorageFolderName}/Projects"
+relinkFolder ~/web "${cloudStorageFolderName}/web"
+relinkFolder ~/Work "${cloudStorageFolderName}/Work"
 
 # .config
 relinkFolder ~/.config/gcloud ~/config/.config/gcloud
