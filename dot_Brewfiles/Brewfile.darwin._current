@@ -37,7 +37,7 @@ brew "wget"
 
 # 'brew install --cask'
 cask "tailscale"
-cask "teamviewer"
+# cask "teamviewer"
 cask "temurin"
 cask "temurin@8"
 cask "warp"
