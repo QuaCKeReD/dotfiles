@@ -25,10 +25,10 @@ if [ ${HOSTNAME%.*} == "bismuth" ]; then
   relinkFolder ~/Movies /Volumes/Data/Users/mark/Movies
 fi
 if [ ${HOSTNAME%.*} == "polonium" ]; then
-  relinkFolder ~/Downloads /Volumes/Data/Users/mark/Downloads
+  # relinkFolder ~/Downloads /Volumes/Data/Users/mark/Downloads
   relinkFolder ~/Pictures /Volumes/Data/Users/mark/Pictures
-  relinkFolder ~/Music /Volumes/Data/Users/mark/Music
-  relinkFolder ~/Movies /Volumes/Data/Users/mark/Movies
+  # relinkFolder ~/Music /Volumes/Data/Users/mark/Music
+  # relinkFolder ~/Movies /Volumes/Data/Users/mark/Movies
 fi
 
 ########################################
