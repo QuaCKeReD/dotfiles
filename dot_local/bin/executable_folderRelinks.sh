@@ -36,8 +36,8 @@ fi
 ########################################
 
 # Pick Cloud Storage in use
-cloudStorage="GDrive"
-# cloudStorage="Dropbox"
+# cloudStorage="GDrive"
+cloudStorage="Dropbox"
 
 # NB: Using full path for home folder as symlink doesnt like '~' in this case
 if [ $cloudStorage == "GDrive" ]; then
