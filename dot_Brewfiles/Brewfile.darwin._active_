@@ -9,13 +9,13 @@ tap "mas-cli/tap"
 tap "nextdns/tap"
 
 tap "grafana/grafana"
-tap "calyptia/tap"
+#tap "calyptia/tap"
 tap "hashicorp/tap"
 
 # 'brew install'
 brew "ansible"
 brew "awscli"
-brew "calyptia/tap/calyptia"
+#brew "calyptia/tap/calyptia"
 brew "coreutils"
 brew "danielfoehrkn/switch/switch"
 brew "danielfoehrkn/switch/switcher"

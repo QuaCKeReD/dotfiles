@@ -8,6 +8,7 @@ brew "minikube"
 cask "logitech-presentation"
 cask "lunar"
 cask "onecast"
+cask "wine-stable"
 
 # 'mas install'
 # mas "Controlly", id: 1548544614

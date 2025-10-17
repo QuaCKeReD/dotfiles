@@ -46,7 +46,7 @@ if [ $cloudStorage == "GDrive" ]; then
 elif [ $cloudStorage == "Dropbox" ]; then
   test -d ~/Library/CloudStorage/Dropbox-Personal && cloudStorageFolderName="/Users/mark/Library/CloudStorage/Dropbox-Personal" || cloudStorageFolderName="/Users/mark/Library/CloudStorage/Dropbox"
   mkdir ~/Dropbox
-  relinkFolder ~/Dropbox/Personal ~/Library/CloudStorage/Dropbox-Personal
+  relinkFolder ~/Dropbox/Personal ${cloudStorageFolderName}
 
 fi
 

@@ -53,6 +53,9 @@ test -e "$(brew --prefix)/opt/switch/switch.sh" && source $(brew --prefix switch
 # Oh My Posh
 eval "$(oh-my-posh init bash --config ~/.local/init/quackered.omp.json)"
 
+# Angular
+source <(ng completion script)
+
 ##############################
 # BASH Completion
 ##############################
