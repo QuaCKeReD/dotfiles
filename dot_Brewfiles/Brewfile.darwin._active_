@@ -73,7 +73,7 @@ cask "pacifist"
 cask "packet-peeper"
 cask "plex"
 cask "postman"
-cask "raindropio"
+#cask "raindropio"
 cask "raspberry-pi-imager"
 cask "raycast"
 cask "setapp"
@@ -117,7 +117,7 @@ mas "NextDNS", id:1464122853
 mas "Numbers", id:409203825
 mas "Okta Extension App", id:1439967473
 mas "Raycast Companion", id: 6738274497
-mas "Save to Raindrop.io", id:1549370672
+#mas "Save to Raindrop.io", id:1549370672
 mas "Sharebot", id:1597340986
 mas "Shell Fish", id: 1336634154
 mas "Spark", id:1176895641
