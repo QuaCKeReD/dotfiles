@@ -88,9 +88,8 @@ cask "webex-meetings"
 cask "webex"
 cask "zoom"
 
-
-brew "docker"
-brew "docker-compose"
+#brew "docker"
+#brew "docker-compose"
 cask "docker"
 # brew "podman"
 # brew "podman-compose"
