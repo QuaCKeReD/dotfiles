@@ -5,6 +5,7 @@
 brew "minikube"
 
 # 'brew install --cask'
+cask "alfred"
 cask "logitech-presentation"
 cask "lunar"
 cask "onecast"
