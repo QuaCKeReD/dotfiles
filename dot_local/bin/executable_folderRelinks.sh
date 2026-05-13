@@ -61,28 +61,50 @@ relinkFolder ~/Pictures/${cloudStorage} "${cloudStorageFolderName}/Pictures"
 relinkFolder ~/Backups "${cloudStorageFolderName}/Backups"
 relinkFolder ~/bin "${cloudStorageFolderName}/bin"
 relinkFolder ~/config "${cloudStorageFolderName}/config"
-relinkFolder ~/Images "${cloudStorageFolderName}/Images"
-relinkFolder ~/Installs "${cloudStorageFolderName}/Installs"
 relinkFolder ~/Projects "${cloudStorageFolderName}/Projects"
 relinkFolder ~/web "${cloudStorageFolderName}/web"
 relinkFolder ~/Work "${cloudStorageFolderName}/Work"
 
-# .config
+# configs
+relinkFolder ~/.ghcp-appmod ~/config/.ghcp-appmod/
+relinkFolder ~/.ghcp-appmod-java ~/config/.ghcp-appmod-java/
+relinkFolder ~/.gnupg ~/config/.gnupg/
+
+# Applications
+relinkFolder ~/.ansible ~/config/.ansible/
+relinkFolder ~/.aws ~/config/.aws/
+relinkFolder ~/.docker ~/config/.docker/
+relinkFolder ~/.gitkraken ~/config/.gitkraken/
+relinkFolder ~/.gk ~/config/.gk/
+relinkFolder ~/.iterm2 ~/config/.iterm2/
+relinkFolder ~/.katalon ~/config/.katalon/
+relinkFolder ~/.kube ~/config/.kube/
+relinkFolder ~/.ssh ~/config/.ssh/
+relinkFolder ~/.warp ~/config/.warp/
+
 relinkFolder ~/.config/gcloud ~/config/.config/gcloud
+relinkFolder ~/.config/gh ~/config/.config/gh/
+relinkFolder ~/.config/iterm2 ~/config/.config/iterm2/
 relinkFolder ~/.config/k9s ~/config/.config/k9s
 relinkFolder ~/.config/karabiner ~/config/.config/karabiner
 relinkFolder ~/.config/mc ~/config/.config/mc
 relinkFolder ~/.config/raycast ~/config/.config/raycast
 
-# Applications
-relinkFolder ~/.ssh ~/config/.ssh/
-relinkFolder ~/.ansible ~/config/.ansible/
-relinkFolder ~/.aws ~/config/.aws/
-relinkFolder ~/.gitkraken ~/config/.gitkraken/
-relinkFolder ~/.kube ~/config/.kube/
+# Ai
+relinkFolder ~/.claude ~/config/.claude/
+relinkFolder ~/.codex ~/config/.codex/
+relinkFolder ~/.codexbar ~/config/.codexbar/
+relinkFolder ~/.copilot ~/config/.copilot/
+relinkFolder ~/.gemini ~/config/.gemini/
+relinkFolder ~/.openclaw ~/config/.openclaw/
 
 # Languages
 relinkFolder ~/.cpan ~/config/.cpan/
+relinkFolder ~/.dotnet ~/config/.dotnet/
+relinkFolder ~/.espressif ~/config/.espressif/
+relinkFolder ~/.gradle ~/config/.gradle/
+relinkFolder ~/.groovy ~/config/.groovy/
+relinkFolder ~/.jenv ~/config/.jenv/
 relinkFolder ~/go ~/config/go/
 relinkFolder ~/perl5 ~/config/perl5/
 
