@@ -76,6 +76,10 @@ export JAVA_HOME="$(/usr/libexec/java_home)"
 export JDK_HOME="$(/usr/libexec/java_home)"
 #export JDK_HOME="/Library/Java/JavaVirtualMachines/openjdk-14.0.1.jdk/Contents/Home"
 
+# RUBY
+export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
+
 ########################################
 {{ else if eq .chezmoi.os "linux" }}
 
