@@ -6,7 +6,6 @@ brew "minikube"
 
 # 'brew install --cask'
 cask "alfred"
-cask "amazon-q"
 cask "logitech-presentation"
 cask "lunar"
 cask "microsoft-teams"
