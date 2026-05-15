@@ -1,3 +1,11 @@
 #!/usr/bin/env bash
 
-export PATH="$HOME/bin:/usr/local/sbin:$JAVA_HOME/bin:/opt/homebrew/opt/ssh-copy-id/bin:/opt/homebrew/opt/ruby/bin:$PATH"
+# macOS homebrew
+## Apple Silicon
+# export PATH="/opt/homebrew/bin:$PATH"
+# export PATH="/opt/homebrew/sbin:$PATH"
+## Apple Intel
+# export PATH="/usr/local/bin:$PATH"
+# export PATH="/usr/local/sbin:$PATH"
+
+export PATH="$HOME/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:$JAVA_HOME/bin:/opt/homebrew/opt/ssh-copy-id/bin:/opt/homebrew/opt/ruby/bin:$PATH"
