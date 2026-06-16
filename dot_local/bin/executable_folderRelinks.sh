@@ -65,17 +65,12 @@ relinkFolder ~/Projects "${cloudStorageFolderName}/Projects"
 relinkFolder ~/web "${cloudStorageFolderName}/web"
 relinkFolder ~/Work "${cloudStorageFolderName}/Work"
 
-# configs
-relinkFolder ~/.ghcp-appmod ~/config/.ghcp-appmod/
-relinkFolder ~/.ghcp-appmod-java ~/config/.ghcp-appmod-java/
-relinkFolder ~/.gnupg ~/config/.gnupg/
-
 # Applications
 relinkFolder ~/.ansible ~/config/.ansible/
 relinkFolder ~/.aws ~/config/.aws/
+relinkFolder ~/.codexbar ~/config/.codexbar/
 relinkFolder ~/.docker ~/config/.docker/
 relinkFolder ~/.gitkraken ~/config/.gitkraken/
-relinkFolder ~/.gk ~/config/.gk/
 relinkFolder ~/.iterm2 ~/config/.iterm2/
 relinkFolder ~/.katalon ~/config/.katalon/
 relinkFolder ~/.kube ~/config/.kube/
@@ -86,16 +81,10 @@ relinkFolder ~/.config/gcloud ~/config/.config/gcloud
 relinkFolder ~/.config/gh ~/config/.config/gh/
 relinkFolder ~/.config/iterm2 ~/config/.config/iterm2/
 relinkFolder ~/.config/k9s ~/config/.config/k9s
-relinkFolder ~/.config/karabiner ~/config/.config/karabiner
 relinkFolder ~/.config/mc ~/config/.config/mc
 relinkFolder ~/.config/raycast ~/config/.config/raycast
 
 # Ai
-relinkFolder ~/.claude ~/config/.claude/
-relinkFolder ~/.codex ~/config/.codex/
-relinkFolder ~/.codexbar ~/config/.codexbar/
-relinkFolder ~/.copilot ~/config/.copilot/
-relinkFolder ~/.gemini ~/config/.gemini/
 relinkFolder ~/.openclaw ~/config/.openclaw/
 
 # Languages
