@@ -28,11 +28,9 @@ brew "qpdf"
 brew "readline"
 brew "ruby"
 brew "screen"
-brew "speedtest-cli"
 brew "ssh-copy-id"
 brew "stress"
 brew "tree"
-brew "webkit2png"
 brew "wget"
 
 # 'brew install --cask'
