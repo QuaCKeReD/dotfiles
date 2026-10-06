@@ -68,18 +68,20 @@ relinkFolder ~/Work "${cloudStorageFolderName}/Work"
 # Applications
 relinkFolder ~/.ansible ~/config/.ansible/
 relinkFolder ~/.aws ~/config/.aws/
-relinkFolder ~/.codexbar ~/config/.codexbar/
 relinkFolder ~/.docker ~/config/.docker/
 relinkFolder ~/.gitkraken ~/config/.gitkraken/
+relinkFolder ~/.gk ~/config/.gk/
 relinkFolder ~/.iterm2 ~/config/.iterm2/
 relinkFolder ~/.katalon ~/config/.katalon/
+relinkFolder ~/.kiro ~/config/.kiro/
 relinkFolder ~/.kube ~/config/.kube/
 relinkFolder ~/.ssh ~/config/.ssh/
 relinkFolder ~/.warp ~/config/.warp/
 
+relinkFolder ~/.config/codexbar ~/config/.config/.codexbar
 relinkFolder ~/.config/gcloud ~/config/.config/gcloud
-relinkFolder ~/.config/gh ~/config/.config/gh/
-relinkFolder ~/.config/iterm2 ~/config/.config/iterm2/
+relinkFolder ~/.config/gh ~/config/.config/gh
+relinkFolder ~/.config/iterm2 ~/config/.config/iterm2
 relinkFolder ~/.config/k9s ~/config/.config/k9s
 relinkFolder ~/.config/mc ~/config/.config/mc
 relinkFolder ~/.config/raycast ~/config/.config/raycast
@@ -98,5 +100,5 @@ relinkFolder ~/go ~/config/go/
 relinkFolder ~/perl5 ~/config/perl5/
 
 # AppD
-relinkFolder ~/.appdynamics ~/config/.appdynamics/
+relinkFolder ~/.appdynamics ~/ codex/.appdynamics/
 relinkFolder ~/cstools ~/config/cstools/
