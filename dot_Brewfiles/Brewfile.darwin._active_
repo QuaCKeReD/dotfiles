@@ -15,6 +15,9 @@ tap "hashicorp/tap"
 
 # 'brew install'
 brew "ansible"
+#brew "antigravity"
+brew "antigravity-cli"
+#brew "antigravity-ide"
 brew "awscli"
 #brew "calyptia/tap/calyptia"
 brew "coreutils"
