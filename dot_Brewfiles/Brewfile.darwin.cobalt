@@ -9,11 +9,11 @@ cask "alfred"
 cask "lunar"
 cask "microsoft-teams"
 cask "onecast"
+cask "thaw"
 
 
 # 'mas install'
 # mas "Controlly", id: 1548544614
-mas "DockPops", id:6759999009
 # mas "One Thing", id: 1604176982
 mas "Play", id: 1596506190
 mas "ReadKit", id: 1615798039
