@@ -6,11 +6,9 @@ brew "minikube"
 
 # 'brew install --cask'
 cask "alfred"
-cask "logitech-presentation"
 cask "lunar"
 cask "microsoft-teams"
 cask "onecast"
-cask "wine-stable"
 
 
 # 'mas install'
@@ -19,5 +17,4 @@ mas "DockPops", id:6759999009
 # mas "One Thing", id: 1604176982
 mas "Play", id: 1596506190
 mas "ReadKit", id: 1615798039
-mas "Turtle Beach Audio Hub", id:948410748
 mas "Typeeto", id:970502923
