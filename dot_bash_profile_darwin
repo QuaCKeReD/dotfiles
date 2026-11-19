@@ -48,10 +48,10 @@ test -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path
 test -e "$(brew --prefix)/opt/switch/switch.sh" && source $(brew --prefix switch)/switch.sh
 
 # Oh My Posh
-eval "$(oh-my-posh init bash --config ~/.local/init/quackered.omp.json)"
+test -e "$(which oh-my-posh)" && eval "$(oh-my-posh init bash --config ~/.local/init/quackered.omp.json)"
 
 # Angular
-source <(ng completion script)
+test -e "$(which ng)" && source <(ng completion script)
 
 ##############################
 # BASH Completion
@@ -66,13 +66,13 @@ elif [ -f /etc/bash_completion ]; then
 fi
 
 # 1Password auto-complete
-source <(op completion bash)
+test -e "$(which op)" && source <(op completion bash)
 
 # oh-my-posh auto-complete
 # source <(oh-my-posh completion bash)
 
 # kubectl auto-complete
-source <(kubectl completion bash)
+test -e "$(which kubectl)" && source <(kubectl completion bash)
 # Enable tab completion for `k` by marking it as an alias for `kubectl`
 complete -o default -F __start_kubectl k
 
